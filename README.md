@@ -1,2 +1,2 @@
-# Navigation_Components
+# Navigation Components
 Simple Android Application using the new Android Navigation Components, with JAVA :)
