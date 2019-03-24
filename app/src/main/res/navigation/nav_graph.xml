@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/one_fragment">
+
+    <fragment
+        android:id="@+id/one_fragment"
+        android:name="com.example.getstartedwiththenavigationcomponent.OneFragment"
+        android:label="OneFragment"
+        tools:layout="@layout/fragment_one" >
+        <action
+            android:id="@+id/one_to_two_action"
+            app:destination="@id/two_fragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@+id/one_fragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/two_fragment"
+        android:name="com.example.getstartedwiththenavigationcomponent.TwoFragment"
+        android:label="TwoFragment"
+        tools:layout="@layout/fragment_two">
+        <action
+            android:id="@+id/two_to_three_action"
+            app:destination="@id/three_fragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@+id/two_fragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/three_fragment"
+        android:name="com.example.getstartedwiththenavigationcomponent.ThreeFragment"
+        android:label="ThreeFragment"
+        tools:layout="@layout/fragment_three">
+        <action
+            android:id="@+id/three_to_one_action"
+            app:destination="@id/one_fragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@+id/one_fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
